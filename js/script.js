@@ -34,10 +34,10 @@ function adicionarcartas() {
     add.innerHTML += `
     <div onclick="virarCarta(this)" class="carta">
                     <div class="carta1 face">
-                        <img src="./imagens/back.png" alt="">
+                        <img src="./imagens/back.png" alt="" data-test="face-down-image">
                     </div>
                     <div class="carta2 back-face face">
-                        <img src="./imagens/${imagem}.gif" alt="">
+                        <img src="./imagens/${imagem}.gif" alt="" data-test="face-up-image">
                     </div>
                 </div>
     `
@@ -50,10 +50,10 @@ function adicionarcartas() {
 
 function virarCarta(carta) {
     const carta1 = carta.querySelector(".carta1");
-    carta1.classList.toggle("front");
+    carta1.classList.add("front");
 
     const carta2 = carta.querySelector(".carta2");
-    carta2.classList.toggle("back");
+    carta2.classList.add("back");
   }
 
 function comparador() { 
