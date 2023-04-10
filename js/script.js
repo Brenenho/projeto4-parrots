@@ -32,7 +32,7 @@ function adicionarcartas() {
     let imagem = imagens[index]
     
     add.innerHTML += `
-    <div onclick="virarCarta(this)" class="carta">
+    <div onclick="virarCarta(this)" class="carta" data-test="card">
                     <div class="carta1 face">
                         <img src="./imagens/back.png" alt="" data-test="face-down-image">
                     </div>
